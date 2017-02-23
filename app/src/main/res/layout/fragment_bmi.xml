@@ -1,0 +1,189 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.losplomos.myapplication.bmiFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Weight"
+        android:id="@+id/textViewWeight"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textColor="@android:color/black"
+        android:textSize="20dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:id="@+id/editTextWeightBmi"
+        android:layout_below="@+id/textViewWeight"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:inputType="numberDecimal"
+        android:minWidth="100dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Height"
+        android:id="@+id/textViewHeight"
+        android:layout_below="@+id/editTextWeightBmi"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textSize="20dp"
+        android:textColor="@android:color/black" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:id="@+id/editTextFeetBmi"
+        android:layout_below="@+id/textViewHeight"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:inputType="number" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ft"
+        android:id="@+id/textViewFeet"
+        android:layout_alignBottom="@+id/editTextFeetBmi"
+        android:layout_toRightOf="@+id/editTextFeetBmi"
+        android:layout_toEndOf="@+id/editTextFeetBmi"
+        android:textColor="@android:color/black" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:ems="10"
+        android:id="@+id/editTextInchesBmi"
+        android:layout_below="@+id/textViewFeet"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="in"
+        android:id="@+id/textViewInches"
+        android:layout_alignBottom="@+id/editTextInchesBmi"
+        android:layout_toRightOf="@+id/textViewFeet"
+        android:layout_toEndOf="@+id/textViewFeet"
+        android:textColor="@android:color/black" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calculate"
+        android:id="@+id/buttonCal"
+        android:layout_below="@+id/editTextInchesBmi"
+        android:layout_alignRight="@+id/textViewInches"
+        android:layout_alignEnd="@+id/textViewInches"
+        android:layout_marginTop="42dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="LB"
+        android:id="@+id/textViewPounds"
+        android:layout_alignBottom="@+id/editTextWeightBmi"
+        android:layout_alignLeft="@+id/textViewInches"
+        android:layout_alignStart="@+id/textViewInches"
+        android:textColor="@android:color/black" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Results"
+        android:id="@+id/textViewResults"
+        android:textColor="@android:color/black"
+        android:textSize="20dp"
+        android:layout_below="@+id/buttonCal"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Entry"
+        android:id="@+id/textViewEntry"
+        android:layout_marginTop="23dp"
+        android:textSize="20dp"
+        android:layout_below="@+id/textViewResults"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textColor="@android:color/black" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/editTextEnty"
+        android:enabled="false"
+        android:layout_alignBottom="@+id/textViewEntry"
+        android:layout_toRightOf="@+id/textViewResults"
+        android:layout_toLeftOf="@+id/buttonCal"
+        android:layout_toStartOf="@+id/buttonCal"
+        android:textIsSelectable="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="BMI"
+        android:id="@+id/textView2"
+        android:layout_marginTop="25dp"
+        android:textColor="@android:color/black"
+        android:textSize="20dp"
+        android:layout_below="@+id/textViewEntry"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Update"
+        android:id="@+id/buttonUpdate"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@+id/editTextEnty"
+        android:layout_toEndOf="@+id/editTextEnty" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Retrive"
+        android:id="@+id/buttonRetrive"
+        android:layout_alignBottom="@+id/buttonUpdate"
+        android:layout_toRightOf="@+id/textViewPounds"
+        android:layout_toEndOf="@+id/textViewPounds" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Save"
+        android:id="@+id/buttonSave"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@+id/textView2"
+        android:layout_toEndOf="@+id/textView2" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editTextBmi"
+        android:layout_alignBottom="@+id/textView2"
+        android:layout_alignLeft="@+id/editTextEnty"
+        android:layout_alignStart="@+id/editTextEnty"
+        android:layout_alignRight="@+id/editTextEnty"
+        android:layout_alignEnd="@+id/editTextEnty"
+        android:enabled="true"
+        android:textIsSelectable="true" />
+
+</RelativeLayout>

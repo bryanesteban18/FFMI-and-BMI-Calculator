@@ -1,0 +1,255 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.losplomos.myapplication.ffmiFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Weight"
+        android:id="@+id/textViewWeight"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:enabled="false"
+        android:textSize="20dp"
+        android:textColor="@android:color/black" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editTextWeightBmi"
+        android:layout_below="@+id/textViewWeight"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:minWidth="200dp"
+        android:inputType="numberDecimal" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Height"
+        android:id="@+id/textViewHeight"
+        android:layout_below="@+id/editTextWeightBmi"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textColor="@android:color/black"
+        android:textSize="20dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editTextFeetBmi"
+        android:layout_below="@+id/textViewHeight"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:minWidth="100dp"
+        android:inputType="numberDecimal" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ft"
+        android:id="@+id/textViewFeet"
+        android:layout_alignBottom="@+id/editTextFeetBmi"
+        android:layout_toRightOf="@+id/editTextFeetBmi"
+        android:layout_toEndOf="@+id/editTextFeetBmi"
+        android:textColor="@android:color/black" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editTextInchesBmi"
+        android:layout_alignTop="@+id/editTextFeetBmi"
+        android:layout_toRightOf="@+id/textViewFeet"
+        android:layout_toEndOf="@+id/textViewFeet"
+        android:layout_marginLeft="42dp"
+        android:layout_marginStart="42dp"
+        android:minWidth="100dp"
+        android:inputType="numberDecimal" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="in"
+        android:id="@+id/textViewInches"
+        android:layout_alignBottom="@+id/editTextInchesBmi"
+        android:layout_toRightOf="@+id/editTextInchesBmi"
+        android:layout_toEndOf="@+id/editTextInchesBmi"
+        android:textColor="@android:color/black" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Body fat"
+        android:id="@+id/textViewBodyFat"
+        android:layout_below="@+id/textViewFeet"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textSize="20dp"
+        android:textColor="@android:color/black" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/editTextBodyFat"
+        android:layout_below="@+id/textViewBodyFat"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:minWidth="100dp"
+        android:inputType="numberDecimal" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="LB"
+        android:id="@+id/textViewPounds"
+        android:layout_alignBottom="@+id/editTextWeightBmi"
+        android:layout_alignRight="@+id/textViewInches"
+        android:layout_alignEnd="@+id/textViewInches"
+        android:textColor="@android:color/black" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="%"
+        android:id="@+id/textView"
+        android:layout_alignBottom="@+id/editTextBodyFat"
+        android:layout_toRightOf="@+id/textViewFeet"
+        android:layout_toEndOf="@+id/textViewFeet"
+        android:textColor="@android:color/black" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calculate"
+        android:id="@+id/buttonCalculate"
+        android:onClick="cal"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Results"
+        android:id="@+id/textViewResults"
+        android:textSize="20dp"
+        android:textColor="@android:color/black"
+        android:layout_below="@+id/buttonCalculate"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Entry"
+        android:id="@+id/textViewEntry"
+        android:layout_below="@+id/textViewResults"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:textColor="@android:color/black"
+        android:textSize="20dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/editTextEntry"
+        android:layout_alignBottom="@+id/textViewEntry"
+        android:layout_toRightOf="@+id/textViewWeight"
+        android:layout_toLeftOf="@+id/buttonCalculate"
+        android:layout_toStartOf="@+id/buttonCalculate"
+        android:textIsSelectable="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="FFMI"
+        android:id="@+id/textViewFFMI"
+        android:textColor="@android:color/black"
+        android:textSize="20dp"
+        android:layout_below="@+id/textViewEntry"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="25dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/editTextFfmi"
+        android:layout_alignBottom="@+id/textViewFFMI"
+        android:layout_alignLeft="@+id/editTextEntry"
+        android:layout_alignStart="@+id/editTextEntry"
+        android:layout_toLeftOf="@+id/buttonCalculate"
+        android:layout_toStartOf="@+id/buttonCalculate"
+        android:textIsSelectable="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Lean Mass"
+        android:id="@+id/textViewLeanMass"
+        android:layout_marginTop="23dp"
+        android:textColor="@android:color/black"
+        android:textSize="20dp"
+        android:layout_below="@+id/textViewFFMI"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:id="@+id/editTextLeanMass"
+        android:layout_alignBottom="@+id/textViewLeanMass"
+        android:layout_alignLeft="@+id/textView"
+        android:layout_alignStart="@+id/textView"
+        android:layout_alignRight="@+id/editTextWeightBmi"
+        android:layout_alignEnd="@+id/editTextWeightBmi"
+        android:textIsSelectable="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="LB"
+        android:id="@+id/textView3"
+        android:textColor="@android:color/black"
+        android:layout_alignBottom="@+id/editTextLeanMass"
+        android:layout_alignRight="@+id/buttonCalculate"
+        android:layout_alignEnd="@+id/buttonCalculate" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Save"
+        android:id="@+id/buttonSaveFFMI"
+        android:layout_alignTop="@+id/buttonRetrieveFfmi"
+        android:layout_toRightOf="@+id/textViewBodyFat"
+        android:layout_toEndOf="@+id/textViewBodyFat" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Update"
+        android:id="@+id/buttonUpdateFfmi"
+        android:layout_alignTop="@+id/buttonSaveFFMI"
+        android:layout_alignLeft="@+id/buttonCalculate"
+        android:layout_alignStart="@+id/buttonCalculate" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Retrieve"
+        android:id="@+id/buttonRetrieveFfmi"
+        android:layout_alignParentBottom="true"
+        android:layout_alignLeft="@+id/textView3"
+        android:layout_alignStart="@+id/textView3" />
+
+</RelativeLayout>
